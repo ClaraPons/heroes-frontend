@@ -28,7 +28,7 @@ const Home = () => {
             <h1>Home</h1>    
             {hero.map(hero => {
                 return(
-                <div className="heroes-box">
+                <div key={hero.slug} className="heroes-box">
                     <img className="image-home" src={hero.image}/>
                     <h2 key={hero.slug}>{hero.name}</h2>
                     <Link to={`/hero/${hero.slug}`}>
